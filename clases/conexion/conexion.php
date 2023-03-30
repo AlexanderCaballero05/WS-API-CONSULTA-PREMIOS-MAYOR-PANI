@@ -22,10 +22,13 @@ function __construct(){
         $this->port = $value['port'];
     }
 
-    $this->conexion = new mysqli($this->server, $this->user, $this->password, $this->database, $this->port);
-    if($this->conexion->connect_errno){
+    $conexion_success = $this->conexion = new mysqli($this->server, $this->user, $this->password, $this->database, $this->port);
+    if($conexion_success->connect_errno){
         echo "algo va mal con la conexion";
             die();
+    }else{
+        return $conexion_success;
+    
     }
 }
 

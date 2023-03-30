@@ -1,6 +1,6 @@
 <?php
 /*require_once "clases/conexion/conexion.php";
-require_once "clases/ws_getPremiosSorteo.class.php";
+require_once "clases/ws_getPremiosPorSorteo.class.php";
 
 
 $_obtenerPremio= new getPremioSorteo;
@@ -47,16 +47,25 @@ print_r($datos);
             </div>
         </nav>
         <div class="divbody">
-            <p>Obtener los premios de loteria Mayor enviando un Sorteo</p>
+            <p>Obtener los números premiados de la lotería mayor enviando un sorteo como parámetro</p>
             <code>
-            GET   /ws_getPremiosSorteo?sorteo=1256
+            GET   /ws_getPremiosPorSorteo?sorteo='numero Sorteo'
             </code>
         </div>
 
         <div class="divbody">
-            <p>Obtener un premio de loteria Mayor enviando un Sorteo y un numero </p>
+            <p>Obtener los números premiados de la lotería mayor del último sorteo jugado</p>
             <code>
-            GET  /ws_getPremioPorNumero?sorteo=1256&numero=45841
+            GET   /ws_getPremiosPorSorteo
+            </code>
+        </div>
+
+        
+
+        <div class="divbody">
+            <p>Obtener un premio de lotería mayor enviando un sorteo y un número como parámetros </p>
+            <code>
+            GET  /ws_getPremioPorNumero?sorteo='numero Sorteo'&numero='numero Premiado'
             </code>
         </div>
      
